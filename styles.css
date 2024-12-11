@@ -1,0 +1,136 @@
+/* Reseteo básico */
+* {
+    margin: 0; /* Elimina márgenes predeterminados */
+    padding: 0; /* Elimina rellenos predeterminados */
+    box-sizing: border-box; /* Ajusta el modelo de caja */
+}
+
+/* Estilo base del body */
+body {
+    font-family: Arial, sans-serif; /* Fuente principal */
+}
+
+/* Estilo del header */
+header {
+    background-color: #32209b; /* Color de fondo del navbar */
+    color: white; /* Color del texto */
+    position: fixed; /* Fija el header en la parte superior */
+    top: 0; /* Asegura que se posicione en la parte superior */
+    width: 100%; /* Ocupa todo el ancho de la ventana */
+    z-index: 1000; /* Coloca el header por encima de otros elementos */
+    height: 60px; /* Altura del header */
+}
+
+/* Estilo del navbar */
+.navbar {
+    display: flex; /* Flexbox para alinear los elementos */
+    justify-content: space-between; /* Logo a la izquierda, carrito a la derecha */
+    align-items: center; /* Centra los elementos verticalmente */
+    padding: 0 20px; /* Espacio a los lados */
+    height: 100%; /* Ocupa toda la altura del header */
+}
+
+/* Estilo del logo */
+.logo img {
+    height: 40px; /* Tamaño del logo */
+}
+
+/* Estilo del ícono del carrito */
+.cart-icon img {
+    height: 25px; /* Tamaño del carrito */
+    cursor: pointer; /* Cambia el cursor a un puntero */
+}
+
+/* Estilo para el contenido principal */
+main {
+    margin-top: 100px; /* Asegura que el contenido no se superponga con el navbar */
+    text-align: center; /* Centra el texto horizontalmente */
+    padding: 20px; /* Espaciado interno para el contenido */
+}
+
+.center-text h1 {
+    font-size: 2rem; /* Tamaño grande para la frase */
+    color: #333; /* Color gris oscuro */
+}
+
+/* Estilo de la cuadrícula de productos */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsivo */
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Estilo de cada producto */
+.product {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.product:hover {
+    transform: translateY(-5px); /* Efecto hover */
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.product h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.product p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.product .price {
+    font-size: 1.2rem;
+    color: orange;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.product button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.product button:hover {
+    background-color: orange;
+}
+
+/* Estilo responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0 10px; /* Reduce el espacio lateral */
+    }
+
+    .logo img {
+        height: 30px; /* Reduce el tamaño del logo */
+    }
+
+    .cart-icon img {
+        height: 20px; /* Reduce el tamaño del carrito */
+    }
+
+    .center-text h1 {
+        font-size: 1.5rem; /* Reduce el tamaño del texto */
+    }
+}
+
+
+
